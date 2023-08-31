@@ -22,14 +22,17 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
     
-      - name: Build with Maven
+      - name: Set up Maven
         run: |
           cd server
           mvn --batch-mode --update-snapshots package
 
       - name: Run Tests
-        run: mvn test
+        run: |
+          cd server
+          mvn test
 
       - name: Build with Maven
-        run: ./mvnw spring-boot:run
-        working-directory: server
+        run: | 
+          cd server
+          ./mvnw spring-boot:run
