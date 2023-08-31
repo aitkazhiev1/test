@@ -19,3 +19,4 @@ jobs:
 
       - name: Build with Maven
         run: ./mvnw spring-boot:run
+        working-directory: server
