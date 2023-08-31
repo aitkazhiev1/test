@@ -22,7 +22,7 @@
 @REM Maven Start Up Batch script
 @REM
 @REM Required ENV vars:
-@REM JAVA_HOME - /usr/bin/java
+@REM JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/bin/java
 @REM
 @REM Optional ENV vars
 @REM M2_HOME - location of maven2's installed home dir
