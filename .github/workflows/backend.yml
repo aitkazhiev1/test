@@ -15,7 +15,7 @@ jobs:
     
 
       - name: Setup Maven Action
-        uses: s4u/setup-maven-action@<3.6.3>
+        uses: s4u/setup-maven-action@3.6.3
       - run: mvn -V
           
       - name: Run Tests
