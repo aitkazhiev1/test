@@ -35,4 +35,5 @@ jobs:
       - name: Build with Maven
         run: | 
           cd server
+          mvn clean install
           ./mvnw spring-boot:run
