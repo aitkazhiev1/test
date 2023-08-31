@@ -13,18 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-
-      - name: Navigate to project directory
-        run: cd server
-
-      - name: Debug
-        run: |
-          pwd
-          ls -la
-
-
       - name: Run Tests
-        run: mvn test
+        run: mvn clean test
+        workin_directory: server
 
       - name: Build with Maven
         run: ./mvnw spring-boot:run
