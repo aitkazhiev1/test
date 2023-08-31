@@ -15,7 +15,7 @@ jobs:
 
       - name: Run Tests
         run: mvn clean test
-        working_directory: server
+        working-directory: server
 
       - name: Build with Maven
         run: ./mvnw spring-boot:run
