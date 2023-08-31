@@ -37,3 +37,4 @@ jobs:
           cd server
           mvn clean install
           ./mvnw spring-boot:run
+
