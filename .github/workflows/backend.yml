@@ -8,15 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        maven: [ '3.6.3']
+  
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-    
-
-      - name: Setup Maven Action
-        uses: s4u/setup-maven-action@3.6.3
-      - run: mvn -V
           
       - name: Run Tests
         run: mvn test
