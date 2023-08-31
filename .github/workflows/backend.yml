@@ -26,6 +26,7 @@ jobs:
         run: |
           cd server
           mvn --batch-mode --update-snapshots package
+          mvn clean install
 
       - name: Run Tests
         run: |
@@ -35,6 +36,5 @@ jobs:
       - name: Build with Maven
         run: | 
           cd server
-          mvn clean install
           ./mvnw spring-boot:run
 
