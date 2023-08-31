@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
     
-      - name: Run Tests
-        run: mvn test
-        env:
-          MAVEN_OPTS: -s $GITHUB_WORKSPACE/server/settings.xml
+
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@<3.6.3>
+      - run: mvn -V
           
       - name: Run Tests
         run: mvn test
